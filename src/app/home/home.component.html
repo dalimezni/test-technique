@@ -1,58 +1,57 @@
   <form [formGroup]="aspirateurForm" (ngSubmit)="onSubmit()">
-  <h1>Donner les dimensions de la grille : </h1>
-  <mat-form-field class="example-full-width">
-    <mat-label>Type in X </mat-label>
-    <input formControlName="x" matInput placeholder="X">
-    <mat-error *ngIf="checkError('x', 'required')">X is required</mat-error>
-    <mat-error *ngIf="checkError('x', 'pattern')">X must be a number</mat-error>
-
-  </mat-form-field>
+    <h1>Donner les dimensions de la grille : </h1>
     <mat-form-field class="example-full-width">
-    <mat-label>Type in Y </mat-label>
-    <input formControlName="y" matInput placeholder="">
-    <mat-error *ngIf="checkError('y', 'required')">y is required</mat-error>
-    <mat-error *ngIf="checkError('y', 'pattern')">Y must be a number</mat-error>
+      <mat-label>Donner X </mat-label>
+      <input formControlName="x" matInput placeholder="X">
+      <mat-error *ngIf="checkError('x', 'required')">X est obligatoire </mat-error>
+      <mat-error *ngIf="checkError('x', 'pattern')">X doit être un nombre</mat-error>
 
-  </mat-form-field>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Donner Y </mat-label>
+      <input formControlName="y" matInput placeholder="">
+      <mat-error *ngIf="checkError('y', 'required')">X est obligatoire</mat-error>
+      <mat-error *ngIf="checkError('y', 'pattern')">Y doit être un nombre</mat-error>
+
+    </mat-form-field>
     <h1>Donner la position initiale de l’aspirateur : </h1>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Type in StartX </mat-label>
-    <input formControlName="startX" matInput placeholder="X">
-    <mat-error *ngIf="checkError('startX', 'required')">StartX is required</mat-error>
-    <mat-error *ngIf="checkError('startX', 'pattern')">StartX must be a number</mat-error>
-
-  </mat-form-field>
     <mat-form-field class="example-full-width">
-    <mat-label>Type in StartY </mat-label>
-    <input formControlName="startY" matInput placeholder="">
-    <mat-error *ngIf="checkError('startY', 'required')">StartY is required</mat-error>
-    <mat-error *ngIf="checkError('startY', 'pattern')">StartY must be a number</mat-error>
+      <mat-label>Donner StartX </mat-label>
+      <input formControlName="startX" matInput placeholder="X">
+      <mat-error *ngIf="checkError('startX', 'required')">StartX est obligatoire</mat-error>
+      <mat-error *ngIf="checkError('startX', 'pattern')">StartX doit être un nombre</mat-error>
 
-  </mat-form-field>
+    </mat-form-field>
     <mat-form-field class="example-full-width">
-    <mat-label>Type in orientation </mat-label>
-    <input formControlName="orientation" matInput placeholder="" >
-    <mat-error *ngIf="checkError('orientation', 'required')">orientation is required</mat-error>
-    <mat-error *ngIf="checkError('orientation', 'pattern')">orientation must be N , S , W , E</mat-error>
-    <mat-error *ngIf="checkError('orientation', 'maxlength')">orientation must be 1 letter</mat-error>
+      <mat-label>Type in StartY </mat-label>
+      <input formControlName="startY" matInput placeholder="">
+      <mat-error *ngIf="checkError('startY', 'required')">StartY est obligatoire</mat-error>
+      <mat-error *ngIf="checkError('startY', 'pattern')">StartY doit être un nombre</mat-error>
 
-  </mat-form-field>
+    </mat-form-field>
     <mat-form-field class="example-full-width">
-    <mat-label>Type in instructions </mat-label>
-    <input formControlName="instructions" matInput placeholder="" >
-    <mat-error *ngIf="checkError('instructions', 'required')">instructions is required</mat-error>
-    <mat-error *ngIf="checkError('instructions', 'pattern')">instructions must be D , G , A </mat-error>
+      <mat-label>Type in orientation </mat-label>
+      <input formControlName="orientation" matInput placeholder="">
+      <mat-error *ngIf="checkError('orientation', 'required')">orientation est obligatoire</mat-error>
+      <mat-error *ngIf="checkError('orientation', 'pattern')">l'orientation doit être N, S, W, E</mat-error>
+      <mat-error *ngIf="checkError('orientation', 'maxlength')">l'orientation doit être 1 lettre</mat-error>
 
-  </mat-form-field>
-  <div id="wrapper">
-    <button  mat-raised-button  color="primary">Submit</button>
-</div>
-  
-</form>
-<div>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Type in instructions </mat-label>
+      <input formControlName="instructions" matInput placeholder="">
+      <mat-error *ngIf="checkError('instructions', 'required')">instructions est obligatoire</mat-error>
+      <mat-error *ngIf="checkError('instructions', 'pattern')">instructions doit être N, S, W, E</mat-error>
+
+    </mat-form-field>
+    <div id="wrapper">
+      <button mat-raised-button color="primary">Valider</button>
+    </div>
+
+  </form>
+  <div>
     <h1>Résultat: </h1>
-{{result}}
+    {{result}}
 
-</div>
-
+  </div>
